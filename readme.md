@@ -1,6 +1,7 @@
 # RedPanda on Kubernetes
 
-[Reference](https://docs.redpanda.com/current/deploy/deployment-option/self-hosted/kubernetes/k-production-deployment/)
+[Reference 1](https://docs.redpanda.com/current/deploy/deployment-option/self-hosted/kubernetes/k-production-deployment/)
+[Reference 2](https://docs.redpanda.com/current/deploy/deployment-option/self-hosted/kubernetes/local-guide/)
 [Helm Charts](https://github.com/redpanda-data/helm-charts)
 
 ```bash
