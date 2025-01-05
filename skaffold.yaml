@@ -1,0 +1,16 @@
+apiVersion: skaffold/v4beta1
+kind: Config
+metadata:
+  name: redpanda-config
+deploy:
+  helm:
+    releases:
+      - name: redpanda
+        repo: https://charts.redpanda.com
+        remoteChart: redpanda
+        namespace: redpanda
+        createNamespace: true
+        version: 5.9.18
+        valuesFiles:
+          - values.yaml
+        wait: true

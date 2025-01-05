@@ -1,0 +1,10 @@
+storage:
+  persistentVolume:
+    enabled: true
+    size: "10Gi"
+    storageClass: "openebs-hostpath" # Customized for my Talos Linux cluster
+
+statefulset:
+  initContainers:
+    setDataDirOwnership:
+      enabled: true
