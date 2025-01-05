@@ -26,3 +26,13 @@ kubectl apply -f redpanda-cluster.yaml --namespace redpanda
 kubectl get redpanda --namespace redpanda --watch
 kubectl get pod --namespace redpanda
 ```
+
+Cleanup:
+
+```bash
+kubectl delete -f redpanda-cluster.yaml --namespace redpanda
+helm uninstall redpanda-controller --namespace redpanda
+kubectl delete crd clusters.redpanda.vectorized.io
+kubectl delete crd consoles.redpanda.vectorized.io
+kubectl delete namespace redpanda
+```
