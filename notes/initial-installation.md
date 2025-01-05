@@ -73,3 +73,14 @@ kubectl exec redpanda-0 --namespace redpanda -- rpk topic describe test-topic
 kubectl exec redpanda-1 --namespace redpanda -- rpk topic describe test-topic
 kubectl exec redpanda-0 --namespace redpanda -- rpk topic delete test-topic
 ```
+
+## Next, let's see if we can get rpk working locally
+
+[Connect to Redpanda in Kubernetes](https://docs.redpanda.com/current/manage/kubernetes/networking/k-connect-to-redpanda/)
+
+It looks like we need these two:
+
+1. https://docs.redpanda.com/current/manage/kubernetes/networking/k-connect-to-redpanda/#connect-to-an-external-cluster
+2. https://docs.redpanda.com/current/manage/kubernetes/networking/external/k-nodeport/
+
+It says it requires external access, but I'm not yet familiar with ExternalDNS and I don't want to over-expose my cluster to the internet, so we will just not do this for now :)
