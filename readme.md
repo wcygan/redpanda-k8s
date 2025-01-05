@@ -21,5 +21,17 @@ RedPanda is a Kafka-compatible streaming platform.
 - Miscellaneous
   - [rpk installation](https://docs.redpanda.com/current/get-started/rpk-install/)
   - [Introduction to rpk](https://docs.redpanda.com/current/get-started/intro-to-rpk/)
+  - [Troubleshooting the RedPanda Deployment](https://docs.redpanda.com/current/deploy/deployment-option/self-hosted/kubernetes/k-production-deployment/#troubleshoot)
   
 ## Quickstart
+
+### Uninstall Redpanda
+
+If needed, you can [uninstall Redpanda](https://docs.redpanda.com/current/deploy/deployment-option/self-hosted/kubernetes/k-production-deployment/#uninstall-redpanda):
+
+```bash
+helm uninstall redpanda --namespace <namespace>
+kubectl delete pod --all --namespace <namespace>
+kubectl delete pvc --all --namespace <namespace>
+kubectl delete secret --all --namespace <namespace>
+```
