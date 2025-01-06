@@ -12,6 +12,18 @@ First, deploy RedPanda on Kubernetes:
 skaffold run
 ```
 
+Check the status of the pods:
+
+```bash
+kubectl get pods -n redpanda
+NAME                                READY   STATUS      RESTARTS        AGE
+redpanda-0                          2/2     Running     0               8h
+redpanda-1                          2/2     Running     2 (4h24m ago)   8h
+redpanda-2                          2/2     Running     0               8h
+redpanda-configuration-k5cn2        0/1     Completed   0               8h
+redpanda-console-6fd4454768-sdf55   1/1     Running     0               8h
+```
+
 Next, open the RedPanda Console
 
 ```bash
